@@ -2,11 +2,11 @@ const medicosvc=require('../services/medicoReg.svc');
 const medicocntrl={
     addMedicos: async function(req, res){
         try{
-            console.log("hello");
+           // console.log("hello");
             let email=req.body.email;
-            console.log(email);
+            //console.log(email);
             let mobile=req.body.mobile;
-            console.log(email);
+           // console.log(email);
             // let medicopresent=await medicosvc.checkMedico(email,mobile);
             // console.log(medicopresent);
             // if(medicopresent.length>=1)

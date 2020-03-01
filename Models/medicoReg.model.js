@@ -12,5 +12,5 @@ const medicoschema = mongoose.Schema({
     timing:String,
     doordelivery:String
 });
-const medicomodel = mongoose.model('medicodb', medicoschema);
+const medicomodel = mongoose.model('medicos', medicoschema);
 module.exports = medicomodel;

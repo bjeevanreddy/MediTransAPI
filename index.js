@@ -51,7 +51,7 @@ app.use('/api', medicorouter);
 //app.use('/jobs', jobsrouter);
 
 
-mongoose.connect('mongodb+srv://jeevan:jeevan>@jeevan-9ruiz.mongodb.net/Meditrans?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+mongoose.connect('mongodb://jeevan:jeevan@jeevan-shard-00-00-9ruiz.mongodb.net:27017,jeevan-shard-00-01-9ruiz.mongodb.net:27017,jeevan-shard-00-02-9ruiz.mongodb.net:27017/Meditrans?ssl=true&replicaSet=jeevan-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
     if (res) {
         console.log('Connected successfully');
     }
@@ -59,6 +59,15 @@ mongoose.connect('mongodb+srv://jeevan:jeevan>@jeevan-9ruiz.mongodb.net/Meditran
         console.log("Something error occured");
     }
 });
+// mongoose.connect('mongodb://localhost:27017/MediTrans', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+//     if (res) {
+//         console.log('DB1 Connected successfully');
+//     }
+//     else {
+//         console.log("Something error occured");
+//     }
+// });
+
 
 // const arraylog=[];
 // var input=null;
@@ -86,5 +95,5 @@ mongoose.connect('mongodb+srv://jeevan:jeevan>@jeevan-9ruiz.mongodb.net/Meditran
 // })
 
 app.listen(PORT, function () {
-    console.log('Server runing on 3000 port');
+    console.log('Server running');
 })
