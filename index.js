@@ -85,6 +85,6 @@ mongoose.connect('mongodb+srv://jeevan:jeevan@cluster0-9ruiz.mongodb.net/MediTra
 //     console.log(arraylog);
 // })
 
-app.listen(3000, function () {
+app.listen(PORT, function () {
     console.log('Server runing on 3000 port');
 })
