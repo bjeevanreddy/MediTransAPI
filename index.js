@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+require('dotenv').config({path: 'variables.env'});
+console.log(process.env.DB_URL);
 var bodyParser = require('body-parser');
 const PORT=process.env.PORT||3000;
 var distDir = __dirname + "/dist/";
@@ -29,6 +31,7 @@ mongoose.connect(node2, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 //         console.log("Something error occured");
 //     }
 // });
-app.listen(PORT, function () {
+const host=process.env.HOST || '0.0.0.0';
+app.listen(PORT,host, function () {
     console.log(`Server running ${PORT}`);
 })
