@@ -11,8 +11,9 @@ const medicorouter = require('./routers/medicoReg.router');
 app.use(bodyParser.json());
 app.get('/',defaultcntrl.defaultCheck);
 app.use('/api', medicorouter);
-
-mongoose.connect('mongodb://jeevan:jeevan@jeevan-shard-00-00-9ruiz.mongodb.net:27017,jeevan-shard-00-01-9ruiz.mongodb.net:27017,jeevan-shard-00-02-9ruiz.mongodb.net:27017/Meditrans?ssl=true&replicaSet=jeevan-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+//const node3="mongodb://jeevan:jeevan@jeevan-shard-00-00-9ruiz.mongodb.net:27017,jeevan-shard-00-01-9ruiz.mongodb.net:27017,jeevan-shard-00-02-9ruiz.mongodb.net:27017/Meditrans?ssl=true&replicaSet=jeevan-shard-0&authSource=admin&retryWrites=true&w=majority";
+const node2="mongodb+srv://jeevan:jeevan@jeevan-9ruiz.mongodb.net/Meditrans?retryWrites=true&w=majority";
+mongoose.connect(node2, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
     if (res) {
         console.log('Connected successfully');
     }
