@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 const PORT=process.env.PORT||3000;
+var distDir = __dirname + "/dist/";
+ app.use(express.static(distDir));
 //const trueLog = require('true-log');
 //const fs = require('fs');
 //const readline = require('readline');
