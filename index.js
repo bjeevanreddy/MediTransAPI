@@ -20,7 +20,7 @@ mongoose.connect(node2, { useNewUrlParser: true, useUnifiedTopology: true, useCr
         console.log('Connected successfully');
     }
     else {
-        console.log("Something error occured");
+        console.log(error);
     }
 });
 // mongoose.connect('mongodb://localhost:27017/MediTrans', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
