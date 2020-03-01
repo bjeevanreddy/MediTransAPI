@@ -29,5 +29,5 @@ mongoose.connect('mongodb://jeevan:jeevan@jeevan-shard-00-00-9ruiz.mongodb.net:2
 //     }
 // });
 app.listen(PORT, function () {
-    console.log('Server running');
+    console.log(`Server running ${PORT}`);
 })
