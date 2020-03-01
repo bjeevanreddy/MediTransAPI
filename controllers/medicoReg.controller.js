@@ -7,19 +7,19 @@ const medicocntrl={
             //console.log(email);
             let mobile=req.body.mobile;
            // console.log(email);
-            // let medicopresent=await medicosvc.checkMedico(email,mobile);
-            // console.log(medicopresent);
-            // if(medicopresent.length>=1)
-            // {
-            //     res.send("You are already registered").status(200);
-            // }
-            // else{
+            let medicopresent=await medicosvc.checkMedico(email,mobile);
+            console.log(medicopresent);
+            if(medicopresent.length>=1)
+            {
+                res.send("You are already registered").status(200);
+            }
+            else{
                 let register=await medicosvc.addMedico(req.body);
                 if(register)
                 {
                     res.send("Registered Successfully!!!").status(200);
                 }  
-            //}
+            }
         }
         catch(error)
         {
