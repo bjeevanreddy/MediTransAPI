@@ -51,7 +51,7 @@ app.use('/api', medicorouter);
 //app.use('/jobs', jobsrouter);
 
 
-mongoose.connect('mongodb+srv://jeevan:jeevan@cluster0-9ruiz.mongodb.net/MediTrans?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+mongoose.connect('mongodb+srv://jeevan:jeevan@cluster0-9ruiz.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
     if (res) {
         console.log('Connected successfully');
     }
